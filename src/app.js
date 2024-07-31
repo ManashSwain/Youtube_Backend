@@ -3,7 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 
 const app = express();
-
+// middlewares 
 app.use(cors(
     {
         origin : process.env.CROSS_ORIGIN ,
@@ -18,5 +18,10 @@ app.use(express.urlencoded({extended: true,
 app.use(express.static("public"));
 app.use(cookieParser());
 
+// Routes 
+
+import userRouter from './routes/user.routes.js'
+
+app.use("/api/v1/users" , userRouter);
 
 export {app}
