@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema(
     },
     avatar: {
       type: String,
-      required: true,
+      // required: true,
     },
     coverImage: {
       type: String,
@@ -36,7 +36,6 @@ const userSchema = new mongoose.Schema(
     },
     refreshToken: {
       type: String,
-      required: true,
     },
     watchHistory: [
       {
